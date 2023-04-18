@@ -26,10 +26,10 @@ parser = argparse.ArgumentParser(description='Image Deblurring using MPRNet')
 
 parser.add_argument('--input_dir', default='./mixedill_test_set_PNG/input/', type=str, help='Directory of validation images')
 parser.add_argument('--result_dir', default='./results/Gridnet1', type=str, help='Directory for results')
-parser.add_argument('--weights', default='./checkpoints/WB/models/Gridnet1/model_epoch_200.pth', type=str, help='Path to weights')
+parser.add_argument('--weights', default='./checkpoints/WB/models/Gridnet1/model_best.pth', type=str, help='Path to weights')
 parser.add_argument('--wb_settings', default=['D', 'S', 'T'], nargs='+', help='Test Dataset')
 # parser.add_argument('--result_dir', default='./results/Gridnet2', type=str, help='Directory for results')
-# parser.add_argument('--weights', default='./checkpoints/WB/models/Gridnet2/model_epoch_200.pth', type=str, help='Path to weights')
+# parser.add_argument('--weights', default='./checkpoints/WB/models/Gridnet2/model_best.pth', type=str, help='Path to weights')
 # parser.add_argument('--wb_settings', default=['D', 'S', 'T', 'F', 'C'], nargs='+', help='Test Dataset')
 
 args = parser.parse_args()

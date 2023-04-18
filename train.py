@@ -26,10 +26,8 @@ import numpy as np
 
 import utils
 from data_RGB import get_training_data, get_validation_data
-# from MPRNet import MPRNet
 from WBnet import WBnet
 import losses
-# from warmup_scheduler import GradualWarmupScheduler
 from tqdm import tqdm
 from wb_utils import get_sobel_kernel
 from pdb import set_trace as stx
@@ -58,8 +56,6 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 num_channels = len(opt.TRAINING.WB_SETTINGS) * 3
 model_restoration = WBnet(device=device, inchnls=num_channels)
-# model_restoration = MPRNet()
-# model_restoration.cuda()
 
 device_ids = [i for i in range(torch.cuda.device_count())]
 if torch.cuda.device_count() > 1:

@@ -8,7 +8,7 @@ VERBOSE: True
 
 MODEL:
   MODE: 'WB'
-  SESSION: 'Gridnet'
+  SESSION: 'Gridnet1'
 
 # Optimization arguments.
 OPTIM:
