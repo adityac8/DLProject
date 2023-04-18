@@ -1,0 +1,31 @@
+###############
+## 
+####
+
+GPU: [0]
+
+VERBOSE: True
+
+MODEL:
+  MODE: 'WB'
+  SESSION: 'Gridnet2'
+
+# Optimization arguments.
+OPTIM:
+  BATCH_SIZE: 32
+  NUM_EPOCHS: 200
+  # NEPOCH_DECAY: [10]
+  LR_INITIAL: 1e-4
+  LR_MIN: 1e-4
+  # BETA1: 0.9
+
+TRAINING:
+  VAL_AFTER_EVERY: 4
+  RESUME: False
+  TRAIN_PS: 64
+  VAL_PS: 256
+  TRAIN_DIR: '../mixedill/train' # path to training data
+  VAL_DIR: '../cube'    # path to validation data
+  SAVE_DIR: './checkpoints'     # path to save models and images
+  WB_SETTINGS: ['D','S','T', 'F', 'C']
+  # SAVE_IMAGES: False
