@@ -24,13 +24,32 @@ python train.py --training training_5pairs.yml
 
 ### Testing
 
+To test the model with `D` `S` `T` version, run
+
 ```
-python test.py
+python test.py --result_dir ./results/Gridnet1 --weights ./checkpoints/WB/models/Gridnet1/model_best.pth --wb_settings D S T
 ```
+
+To test the model with `D` `S` `T` `F` `C` version, run
+
+```
+python test.py --result_dir ./results/Gridnet2 --weights ./checkpoints/WB/models/Gridnet2/model_best.pth --wb_settings D S T F C
+```
+
 
 ### Evaluation
 
+To evaluate the model with `D` `S` `T` version, run
+
 ```
-python eval.py
+python evaluate.py --prd_dir ./results/Gridnet1
 ```
+
+To evaluate the model with `D` `S` `T` `F` `C` version, run
+
+```
+python evaluate.py --prd_dir ./results/Gridnet2
+```
+
+
 
