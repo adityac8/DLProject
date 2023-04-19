@@ -17,7 +17,7 @@ from pdb import set_trace as stx
 import weight_refinement
 from PIL import Image
 
-parser = argparse.ArgumentParser(description='Image Deblurring using MPRNet')
+parser = argparse.ArgumentParser(description='Image WB')
 
 parser.add_argument('--input_dir', default='./mixedill_test_set_PNG/input/', type=str, help='Directory of validation images')
 parser.add_argument('--result_dir', default='./results/Gridnet1', type=str, help='Directory for results')
