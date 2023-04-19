@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import cv2
+import argparse
 
 from natsort import natsorted
 from glob import glob
@@ -10,9 +11,16 @@ from eval.evaluate_cc import evaluate_cc
 
 from pdb import set_trace as stx
 
-tar_dir = './mixedill_test_set_PNG/target'
-prd_dir = './results/Gridnet1'
-# prd_dir = './results/Gridnet2'
+parser = argparse.ArgumentParser(description='Image WB')
+
+parser.add_argument('--tar_dir', default='./mixedill_test_set_PNG/input/', type=str, help='Directory of validation images')
+parser.add_argument('--prd_dir', default='./results/Gridnet1', type=str, help='Directory for results')
+# parser.add_argument('--prd_dir', default='./results/Gridnet2', type=str, help='Directory for results')
+
+args = parser.parse_args()
+
+tar_dir = args.tar_dir
+prd_dir = args.prd_dir
 
 deltaE00s, MSEs, MAEs, deltaE76s = [], [], [] ,[]
 
