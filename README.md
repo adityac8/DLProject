@@ -1,4 +1,4 @@
-# DLProject
+# Reproducibility Report: Auto White-Balance Correction for Mixed-Illuminant Scenes
 
 ## Replicating our results
 
