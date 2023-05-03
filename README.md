@@ -11,6 +11,15 @@ conda install pytorch=1.8 torchvision cudatoolkit=10.2 -c pytorch
 pip install matplotlib scikit-learn scikit-image opencv-python yacs joblib natsort h5py tqdm
 pip install einops gdown addict future lmdb numpy pyyaml requests scipy tb-nightly yapf lpips
 ```
+### Dataset
+
+We download the dataset provided using the original links.
+
+Train: We train our model on the Rendered WB dataset. Links for [input](https://ln2.sync.com/dl/21ce83f60/v36jwspj-e4mw2vtb-s6ifkgmv-jzc8mvya/view/default/9967673690008) and [target](https://ln2.sync.com/dl/1f607c380/ypyw5z4p-q765pviu-rc8tzi2n-4pyyep8h/view/default/9967673010008)
+
+Val: We cross validate our results on the Cube Dataset. Links for [input](https://ln2.sync.com/dl/fb7ef1c90/v2pbm9jm-wq5p8z6b-rrg2g4ez-r4c5wixg/view/default/9967668600008) and [target](https://ln2.sync.com/dl/fb7ef1c90/v2pbm9jm-wq5p8z6b-rrg2g4ez-r4c5wixg/view/default/9967668600008)
+
+Test: We test our model on the mixed-illuminant test set. We already add the test set in this repository.
 
 ### Training
 
