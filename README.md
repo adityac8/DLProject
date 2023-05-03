@@ -25,7 +25,9 @@ Test: We test our model on the mixed-illuminant test set. We already add the tes
 
 To start training, you should first download the Rendered WB dataset, which includes 65K sRGB images rendered with different color temperatures. Each image in this dataset has the corresponding ground-truth sRGB image that was rendered with an accurate white-balance correction. From this dataset, we selected 9,200 training images that were rendered with the "camera standard" photofinishing and with the following white-balance settings: `tungsten` (or `incandescent`), `fluorescent`, `daylight`, `cloudy`, and `shade`. To get this set, you need to only use images ends with the following parts: `_T_CS.png`, `_F_CS.png`, `_D_CS.png`, `_C_CS.png`, `_S_CS.png` and their associated ground-truth image (that ends with `_G_AS.png`).
 
-Copy all training input images to `../mixedill/train/input` and copy all ground truth images to `../mixedill/train/target`.
+Use `process_dataset.py` to
+- Copy all training input images to `../mixedill/train/input` and copy all ground truth images to `../mixedill/train/target`.
+- Copy all validation input images to `../cube/input` and copy all ground truth images to `../cube/target`.
 
 
 To train the model with `D` `S` `T` version, run
